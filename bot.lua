@@ -5,57 +5,89 @@ URL = require('socket.url')
 JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
-local bot_api_key = ""
+local bot_api_key = "157517807:AAHxsopqJlYSLUH54KTwt_9phGuMKS2hkT0"
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
-local start = [[HI
-`/bold text`
-return *bold* text
+local start = [[Hi,
+I'm *TrT RoBot* 😊
 
-`/italic text`
-return _italic_ text
+I Can Make *Bold*, `Code` And _Italic_ Your Text.
 
-`/link url text`
-markdown link
+Oh, And I Can Make [HyperLink](www.telegram.me/TrT_Channel) And Convert *Image* To *Sticker* Or *Sticker* To *Image* For You.
 
-`/code text`
-return `code` text
+*If U Want To View Help, Type* /help
+]]
+local help = [[📝 Trt RoBot Commands:
+➖➖➖➖➖➖➖➖➖➖➖
+/bold Salam
+Exp: *Salam*
 
+/italic Salam
+Exp: _Salam_
 
-*-channel*
-*add bot to a channel then use this commands*
+/link Url Salam
+[Salam](https://google.com)
 
-`/boldch @channelusername text`
-send *bold* text to a channel
-
-`/italicch @channelusername text`
-send _italic_ text to a channel
-
-`/linkch @channelusername url text`
-send markdown link to a channel
-
-`/codech @channelusername text`
-send `code` text to a channel
+/code Salam
+Exp: `Salam`
 
 
-*-other*
+*Channel:*
+*Add Bot To a Channel Then Use This Commands*
 
-*sticker to photo* 
-_just send a sticker_
+/boldch @channelid Welcome
+Exp: *Welcome*
 
-*photo to sticker*
-_just send a photo_
+/italicch @channelid Welcome
+Exp: _Welcome_
 
-[Source](https://github.com/pAyDaAr/lua-api-bot) ;-)
-]] 
+/linkch @lid Url Salam
+Exp: [Salam](https://google.com)
 
+/codech @channelid Welcome
+`Welcome`
+
+
+*Other:*
+*Sticker To Photo* 
+_Just Send A Sticker_
+
+*Photo To Sticker*
+_Just Send A Photo_
+]]
+local credits = [[ *TrT Robot*
+*Telegram Writing Tools*
+*An Advance Administrator Bot Based On Linux File Manager Written In Lua*
+
+*Admin:*
+`@iSepehr2001`
+
+*Special Thanks To:*
+`Iman Daneshi`
+And
+`Amir Paydar`
+_For Help Me To Create This Bot_
+[Sepehr](www.telegram.me/gamekade)
+_For Graphic Designs_
+
+*Our Channels:*
+@TrT_Channel
+]]
+local ask = [[ *Need Help?*
+
+*If You Ask A Questions About Bot Please Send A Message To Admin* 😊
+ID Admin: @iSepehr2001
+
+*If You Reported Send A Message To This ID*
+ID Admin: @iSepehr2001Bot
+]]
 -------
 
 ----utilites----
 
 function is_admin(msg)-- Check if user is admin or not
   local var = false
-  local admins = {}-- put your id here
+  local admins = {69759863}-- put your id here
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
@@ -205,7 +237,7 @@ function bot_run()
 
 	bot = bot.result
 
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.." \nbased on linux-file-manager :D\nthx to @imandaneshi\neditor: @unfriendly"
+	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.." \nTnx to Iman Daneshi And Amir Paydar\nEditor: @iSepehr2001"
 
 	print(bot_info)
 
@@ -289,9 +321,19 @@ elseif msg.text:match("^/linkch (.*) (.*) (.*)") then
  local channel = matches[1]
  sendMessage(channel, text, true, false, true)
 
-elseif msg.text:match("^/[sS]tart") or msg.text:match("^/[Hh]elp") then
+elseif msg.text:match("^/[sS]tart") then
  sendMessage(msg.chat.id, start, true, false, true)
 
+elseif msg.text:match("^/[Hh]elp") then
+ sendMessage(msg.chat.id, help, true, false, true)
+
+elseif msg.text:match("^/[Cc]redits") then
+ sendMessage(msg.chat.id, credits, true, false, true)
+
+elseif msg.text:match("^/[Aa]sk") then
+ sendMessage(msg.chat.id, ask, true, false, true)
+
+ 
 return end
 
 end
