@@ -57,21 +57,21 @@ _Just Send A Photo_
 ]]
 local credits = [[ *TrT Robot*
 *Telegram Writing Tools*
+
 *An Advance Administrator Bot Based On Linux File Manager Written In Lua*
 
 *Admin:*
-`@iSepehr2001`
+@iSepehr2001
 
 *Special Thanks To:*
-`Iman Daneshi`
-And
-`Amir Paydar`
-_For Help Me To Create This Bot_
+Iman Daneshi And Amir Paydar
+*For Help Me To Create This Bot*
+
 [Sepehr](www.telegram.me/gamekade)
-_For Graphic Designs_
+*For Graphic Designs*
 
 *Our Channels:*
-@TrT_Channel
+[TrT_Channel](www.telegram.me/TrT_Channel)
 ]]
 local ask = [[ *Need Help?*
 
