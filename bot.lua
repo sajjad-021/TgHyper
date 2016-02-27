@@ -41,8 +41,8 @@ Exp: *Welcome*
 /italicch @channelid Welcome
 Exp: _Welcome_
 
-/linkch @lid Url Salam
-Exp: [Salam](https://google.com)
+/linkch @channelid Url Welcome
+Exp: [Welcome](https://google.com)
 
 /codech @channelid Welcome
 `Welcome`
