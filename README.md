@@ -1,10 +1,10 @@
-# TrT Robot
+*TrT Robot*
 
 
-[#Trt Robot](https://telegram.me/TrT_Robot)
+[Trt Robot](https://telegram.me/TrT_Robot)
 
 
-[#TrT Channel](https://telegram.me/TrT_Channel)
+[TrT Channel](https://telegram.me/TrT_Channel)
 
 
 Admin
