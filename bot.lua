@@ -31,6 +31,8 @@ Exp: _Salam_
 /code Salam
 Exp: `Salam`
 
+/mix
+Mix Text
 
 *Channel:*
 *Add Bot To a Channel Then Use This Commands*
@@ -81,6 +83,7 @@ ID Admin: @iSepehr2001
 *If You Reported Send A Message To This ID*
 ID Admin: @iSepehr2001Bot
 ]]
+local mix = [[ For Mix Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command. ]]
 -------
 
 ----utilites----
@@ -337,6 +340,9 @@ elseif msg.text:match("^/[Cc]redits") then
 
 elseif msg.text:match("^/[Aa]sk") then
  sendMessage(msg.chat.id, ask, true, false, true)
+ 
+elseif msg.text:match("^/[Mm]ix") then
+ sendMessage(msg.chat.id, mix, true, false, true)
 
  
 return end
