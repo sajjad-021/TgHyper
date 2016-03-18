@@ -261,7 +261,7 @@ function msg_processor(msg)
 	local url = BASE_URL .. '/getFile?file_id='..file
 	local res = HTTPS.request(url)
 	local jres = JSON.decode(res)
-	filename = "sticker.png"
+	filename = "data/sticker/sticker.png"
 	file = download_to_file("https://api.telegram.org/file/bot"..bot_api_key.."/"..jres.result.file_path, filename)
 	sendPhoto(msg.chat.id, file)
 
@@ -271,7 +271,7 @@ function msg_processor(msg)
 	local url = BASE_URL .. '/getFile?file_id='..file
 	local res = HTTPS.request(url)
 	local jres = JSON.decode(res)
-	filename = "photo.jpg"
+	filename = "data/photo/photo.jpg"
 	file = download_to_file("https://api.telegram.org/file/bot"..bot_api_key.."/"..jres.result.file_path, filename)
 	sendSticker(msg.chat.id, file)
 
@@ -315,11 +315,16 @@ elseif msg.text:match("^/linkch (.*) (.*) (.*)") then
  local text = '`'..matches[1]..'`'
  sendMessage(msg.chat.id, text, true, false, true)
 
- elseif msg.text:match("^/codech (.*) (.*)") then
+elseif msg.text:match("^/codech (.*) (.*)") then
  local matches = { string.match(msg.text, "^/codech (.*) (.*)") }
  local text = '`'..matches[2]..'`'
  local channel = matches[1]
  sendMessage(channel, text, true, false, true)
+ 
+elseif msg.text:match("^/mix (.*)") then
+ local matches = { string.match(msg.text, "/mix (.*)") }
+ local text = ''..matches[1]..''
+ sendMessage(msg.chat.id, text, true, false, true)
 
 elseif msg.text:match("^/[sS]tart") then
  sendMessage(msg.chat.id, start, true, false, true)
