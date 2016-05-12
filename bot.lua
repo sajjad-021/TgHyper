@@ -16,8 +16,10 @@ I Can Make *Bold*, `Code` And _Italic_ Your Text.
 Oh, And I Can Make [HyperLink](www.telegram.me/TrT_Channel) And Convert *Image* To *Sticker* Or *Sticker* To *Image* For You.
 
 *If U Want To View Help, Type* /help
+➖➖➖➖➖➖➖➖➖➖➖➖
+`Version 3.5.0`
 ]]
-local help = [[📝 Trt RoBot Commands:
+local help = [[📝 TrT Robot Commands:
 ➖➖➖➖➖➖➖➖➖➖➖
 /bold Salam
 Exp: *Salam*
@@ -47,7 +49,7 @@ Exp: _Welcome_
 Exp: [Welcome](https://google.com)
 
 /codech @channelid Welcome
-`Welcome`
+Exp: `Welcome`
 
 
 *Other:*
@@ -62,28 +64,27 @@ local credits = [[ *TrT Robot*
 
 *An Advance Administrator Bot Based On Linux File Manager Written In Lua*
 
-*Admin:*
-@iSepehr2001
-
 *Special Thanks To:*
 Iman Daneshi And Amir Paydar
-*For Help Me To Create This Bot*
+*For Help Me To Create Bot*
 
 [Sepehr](www.telegram.me/gamekade)
-*For Graphic Designs*
+*For Graphic Design*
 
-*Our Channels:*
-[TrT_Channel](www.telegram.me/TrT_Channel)
+👤 [Admin](https://telegram.me/iSepehr2001)
+📢 [Channel](https://telegram.me/TrT_Channel)
 ]]
 local ask = [[ *Need Help?*
 
-*If You Ask A Questions About Bot Please Send A Message To Admin* 😊
-ID Admin: @iSepehr2001
+If You Ask A Questions About Bot Please Send A Message To [Admin](https://telegram.me/iSepehr2001)
 
-*If You Reported Send A Message To This ID*
-ID Admin: @iSepehr2001Bot
+If You Reported Send A Message To [This](https://telegram.me/iSepehr2001Bot) ID
 ]]
 local mix = [[ For Mix Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command. ]]
+local bold = [[ For Bold Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command Or *Type* /help ]]
+local italic = [[ For Italic Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command Or *Type* /help ]]
+local code = [[ For Code Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command Or *Type* /help ]]
+local link = [[ For Hyperlink Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command Or *Type* /help ]]
 -------
 
 ----utilites----
@@ -240,7 +241,7 @@ function bot_run()
 
 	bot = bot.result
 
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.." \nTnx to Iman Daneshi And Amir Paydar\nEditor: @iSepehr2001"
+	local bot_info = "Robot Has Started ✅\nUsername = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.." \nTnx to Iman Daneshi And Amir Paydar\nEditor: @iSepehr2001"
 
 	print(bot_info)
 
@@ -256,7 +257,7 @@ function msg_processor(msg)
 	if msg.audio or msg.document or msg.video or msg.voice then return end -- Admins only !
 	if msg.date < os.time() - 5 then -- Ignore old msgs
 		return
-    end
+end
 
   if msg.sticker then
   local matches = { (msg.sticker) }
@@ -325,9 +326,15 @@ elseif msg.text:match("^/codech (.*) (.*)") then
  sendMessage(channel, text, true, false, true)
  
 elseif msg.text:match("^/mix (.*)") then
- local matches = { string.match(msg.text, "/mix (.*)") }
+ local matches = { string.match(msg.text, "^/mix (.*)") }
  local text = ''..matches[1]..''
  sendMessage(msg.chat.id, text, true, false, true)
+ 
+elseif msg.text:match("^/mixch (.*) (.*)") then
+ local matches = { string.match(msg.text, "^/mixch (.*) (.*)") }
+ local text = matches[2]
+ local channel = matches[1]
+ sendMessage(channel, text, true, false, true)
 
 elseif msg.text:match("^/[sS]tart") then
  sendMessage(msg.chat.id, start, true, false, true)
@@ -343,8 +350,19 @@ elseif msg.text:match("^/[Aa]sk") then
  
 elseif msg.text:match("^/[Mm]ix") then
  sendMessage(msg.chat.id, mix, true, false, true)
-
  
+elseif msg.text:match("^/[Bb]old") then
+ sendMessage(msg.chat.id, bold, true, false, true)
+
+elseif msg.text:match("^/[Ll]ink") then
+ sendMessage(msg.chat.id, link, true, false, true)
+ 
+elseif msg.text:match("^/[Ii]talic") then
+ sendMessage(msg.chat.id, italic, true, false, true)
+ 
+elseif msg.text:match("^/[Cc]ode") then
+ sendMessage(msg.chat.id, code, true, false, true)
+
 return end
 
 end
