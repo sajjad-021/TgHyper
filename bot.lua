@@ -5,7 +5,7 @@ URL = require('socket.url')
 JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
-local bot_api_key = "157517807:AAHxsopqJlYSLUH54KTwt_9phGuMKS2hkT0"
+local bot_api_key = "294803517:AAH_TBYVjGwG_PhIxo0IvPyi6_8ECU9wnRs"
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[Hi,
