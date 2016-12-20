@@ -91,7 +91,7 @@ local link = [[ For Hyperlink Your Text Please Join This [Channel](https://teleg
 
 function is_admin(msg)-- Check if user is admin or not
   local var = false
-  local admins = {323382252}-- put your id here
+  local admins = {323382252,294803517}-- put your id here
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
