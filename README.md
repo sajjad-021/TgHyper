@@ -23,7 +23,7 @@ enter numlic id of admin moderator bot and bot numeric
   
  
  
-<h1 align="left">`(---Instruction---)
+#[---Instruction---]
     
 
 I Can Make *Bold*, `Code` And _Italic_ Your Text.
