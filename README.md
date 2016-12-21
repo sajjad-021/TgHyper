@@ -5,6 +5,27 @@
 ***
 
 
+----Install----
+
+       GoTo line  8 
+enter token
+
+  local bot_api_key = "ENTER TOKEN HERE"
+  
+   then
+  
+      GoTo line   90
+enter numlic id of admin moderator bot and bot numeric
+
+  local admins = {ENTER YOUR NUBER ID,ENTER BOT NUMBER ID}
+    
+  End    
+  
+ 
+ 
+    Instruction
+    
+
 I Can Make *Bold*, `Code` And _Italic_ Your Text.
 
 Oh, And I Can Make [HyperLink](www.telegram.me/MemberPlus_TM) And Convert *Image* To *Sticker* Or *Sticker* To *Image* For You.
@@ -76,17 +97,3 @@ local italic = [[ For Italic Your Text Please Join This [Channel](https://telegr
 local code = [[ For Code Your Text Please Join This [Channel](https://telegram.me/MemberPlus_TM) And Read The Help About This Command Or *Type* /help ]]
 local link = [[ For Hyperlink Your Text Please Join This [Channel](https://telegram.me/MemberPlus_TM) And Read The Help About This Command Or *Type* /help ]]
 -------
-
-----Install----
-
-        GoTo line  8 
-enter token
-  local bot_api_key = "Enter Token"
-   then
-  
-      GoTo line   90
-  local admins = {ENTER YOUR NUBER ID,ENTER BOT NUMBER ID}
-    
-  End    
-  
- 
