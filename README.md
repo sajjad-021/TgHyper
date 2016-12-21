@@ -5,7 +5,7 @@
 ***
 
 
-----Install----
+#[----Install----]
 
        GoTo line  8 
 enter token
@@ -23,7 +23,7 @@ enter numlic id of admin moderator bot and bot numeric
   
  
  
-    Instruction
+<h1 align="left">`(---Instruction---)
     
 
 I Can Make *Bold*, `Code` And _Italic_ Your Text.
