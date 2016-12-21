@@ -72,7 +72,7 @@ local credits = [[ *TgHyperBoT*
 ]]
 local ask = [[ *Need Help?*
 
-If You Ask A Questions About Bot Please Send A Message To [Admin](https://telegram.me/iSepehr2001)
+If You Ask A Questions About Bot Please Send A Message To [Admin](https://telegram.me/sajjad_021)
 
 If You Reported Send A Message To [This](https://telegram.me/tgmessengerbot) ID
 ]]
