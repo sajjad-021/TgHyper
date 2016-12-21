@@ -5,21 +5,21 @@ URL = require('socket.url')
 JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
-local bot_api_key = "327493127:AAHS1TMn1FJmbRhlNSnAbzKKkxfB4bBzCBY"
+local bot_api_key = "316390290:AAEXEfCrLPrCoFjgHi8uT41Fi7Hq_2nYacI"
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[Hi,
-I'm *TrT RoBot* 😊
+I'm *TgHyperBoT* 😊
 
 I Can Make *Bold*, `Code` And _Italic_ Your Text.
 
-Oh, And I Can Make [HyperLink](www.telegram.me/TrT_Channel) And Convert *Image* To *Sticker* Or *Sticker* To *Image* For You.
+Oh, And I Can Make [HyperLink](www.telegram.me/MemberPlus_TM) And Convert *Image* To *Sticker* Or *Sticker* To *Image* For You.
 
 *If U Want To View Help, Type* /help
 ➖➖➖➖➖➖➖➖➖➖➖➖
 `Version 3.5.0`
 ]]
-local help = [[📝 TrT Robot Commands:
+local help = [[TgHyperBoT Commands:
 ➖➖➖➖➖➖➖➖➖➖➖
 /bold Salam
 Exp: *Salam*
@@ -59,39 +59,35 @@ _Just Send A Sticker_
 *Photo To Sticker*
 _Just Send A Photo_
 ]]
-local credits = [[ *TrT Robot*
+local credits = [[ *TgHyperBoT*
 *Telegram Writing Tools*
 
 *An Advance Administrator Bot Based On Linux File Manager Written In Lua*
 
-*Special Thanks To:*
-Iman Daneshi And Amir Paydar
-*For Help Me To Create Bot*
-
-[Sepehr](www.telegram.me/gamekade)
+[MemberPlus_TM](www.telegram.me/MemberPlus_TM)
 *For Graphic Design*
 
-👤 [Admin](https://telegram.me/iSepehr2001)
-📢 [Channel](https://telegram.me/TrT_Channel)
+👤 [Admin](https://telegram.me/sajjad_021)
+📢 [Channel](https://telegram.me/MemberPlus_TM)
 ]]
 local ask = [[ *Need Help?*
 
 If You Ask A Questions About Bot Please Send A Message To [Admin](https://telegram.me/iSepehr2001)
 
-If You Reported Send A Message To [This](https://telegram.me/iSepehr2001Bot) ID
+If You Reported Send A Message To [This](https://telegram.me/tgmessengerbot) ID
 ]]
-local mix = [[ For Mix Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command. ]]
-local bold = [[ For Bold Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command Or *Type* /help ]]
-local italic = [[ For Italic Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command Or *Type* /help ]]
-local code = [[ For Code Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command Or *Type* /help ]]
-local link = [[ For Hyperlink Your Text Please Join This [Channel](https://telegram.me/TrT_Channel) And Read The Help About This Command Or *Type* /help ]]
+local mix = [[ For Mix Your Text Please Join This [Channel](https://telegram.me/MemberPlus_TM) And Read The Help About This Command. ]]
+local bold = [[ For Bold Your Text Please Join This [Channel](https://telegram.me/MemberPlus_TM) And Read The Help About This Command Or *Type* /help ]]
+local italic = [[ For Italic Your Text Please Join This [Channel](https://telegram.me/MemberPlus_TM) And Read The Help About This Command Or *Type* /help ]]
+local code = [[ For Code Your Text Please Join This [Channel](https://telegram.me/MemberPlus_TM) And Read The Help About This Command Or *Type* /help ]]
+local link = [[ For Hyperlink Your Text Please Join This [Channel](https://telegram.me/MemberPlus_TM) And Read The Help About This Command Or *Type* /help ]]
 -------
 
 ----utilites----
 
 function is_admin(msg)-- Check if user is admin or not
   local var = false
-  local admins = {323382252,327493127}-- put your id here
+  local admins = {158955285,316390290}-- put your id here
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
